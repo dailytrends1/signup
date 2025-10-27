@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up | Global Sharing</title>
+  <meta name="description" content="Join Global Sharing today and be part of our amazing online community. Click sign up below to continue.">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #00c3ff, #ff5f6d);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #222;
+    }
+    .card {
+      background: #fff;
+      width: 90%;
+      max-width: 360px;
+      border-radius: 25px;
+      text-align: center;
+      padding: 35px 25px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 0.6s ease-in-out forwards;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 25px;
+      line-height: 1.4;
+    }
+    .btn {
+      width: 85%;
+      background: linear-gradient(90deg, #00c3ff, #ff5f6d);
+      color: #fff;
+      border: none;
+      padding: 14px 24px;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      transform: scale(1.04);
+      opacity: 0.9;
+    }
+    footer {
+      font-size: 12px;
+      color: #555;
+      margin-top: 20px;
+    }
+    footer a {
+      color: #111;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    #privacy {
+      max-height: 0;
+      overflow: hidden;
+      background: #f9f9f9;
+      color: #333;
+      font-size: 12px;
+      text-align: left;
+      border-radius: 20px;
+      padding: 0 14px;
+      transition: max-height 0.5s ease, padding 0.3s ease;
+      margin-top: 12px;
+    }
+    #privacy.active {
+      max-height: 220px;
+      padding: 14px 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Welcome</h2>
+    <p>Click on <strong>Sign Up</strong> below</p>
+    <button class="btn" id="signupBtn">Sign Up Now</button>
+
+    <footer>
+      © 2025 Global Sharing | <a id="privacyToggle">Privacy Policy</a>
+    </footer>
+
+    <div id="privacy">
+      <strong>Privacy Policy</strong><br><br>
+      Your privacy is our priority. We never share your details with third parties.
+      By clicking “Sign Up Now”, you agree to our data handling policy and terms of use.
+    </div>
+  </div>
+
+  <script>
+    const signupBtn = document.getElementById('signupBtn');
+    const privacyToggle = document.getElementById('privacyToggle');
+    const privacyBox = document.getElementById('privacy');
+
+    signupBtn.onclick = () => {
+      // redirect to your main site or registration page
+      window.location.href = "https://your-main-site.com";
+    };
+
+    privacyToggle.onclick = () => {
+      privacyBox.classList.toggle('active');
+    };
+  </script>
+</body>
+</html>
