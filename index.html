@@ -1,98 +1,123 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign Up | Global Sharing</title>
-  <meta name="description" content="Join Global Sharing today and be part of our amazing online community. Click sign up below to continue.">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #00c3ff, #ff5f6d);
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #222;
-    }
-    .card {
-      background: #fff;
-      width: 90%;
-      max-width: 360px;
-      border-radius: 25px;
-      text-align: center;
-      padding: 35px 25px;
-      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
-      animation: fadeIn 0.6s ease-in-out forwards;
-    }
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-    h2 {
-      font-size: 20px;
-      margin-bottom: 15px;
-    }
-    p {
-      font-size: 15px;
-      color: #555;
-      margin-bottom: 25px;
-      line-height: 1.4;
-    }
-    .btn {
-      width: 85%;
-      background: linear-gradient(90deg, #00c3ff, #ff5f6d);
-      color: #fff;
-      border: none;
-      padding: 14px 24px;
-      border-radius: 25px;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    .btn:hover {
-      transform: scale(1.04);
-      opacity: 0.9;
-    }
-    footer {
-      font-size: 12px;
-      color: #555;
-      margin-top: 20px;
-    }
-    footer a {
-      color: #111;
-      text-decoration: underline;
-      cursor: pointer;
-    }
-    #privacy {
-      max-height: 0;
-      overflow: hidden;
-      background: #f9f9f9;
-      color: #333;
-      font-size: 12px;
-      text-align: left;
-      border-radius: 20px;
-      padding: 0 14px;
-      transition: max-height 0.5s ease, padding 0.3s ease;
-      margin-top: 12px;
-    }
-    #privacy.active {
-      max-height: 220px;
-      padding: 14px 16px;
-    }
-  </style>
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "tx7ifxqfrd");
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Select Gender | Global Sharing</title>
+<meta name="description" content="Select your gender to continue. Safe, fast, and secure experience on Global Sharing.">
+<meta http-equiv="Cache-Control" content="max-age=31536000, must-revalidate">
+
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#00e0ff,#ff007a);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#111;
+  }
+  .card{
+    background:#fff;
+    width:90%;
+    max-width:360px;
+    border-radius:25px;
+    text-align:center;
+    padding:35px 25px;
+    box-shadow:0 6px 25px rgba(0,0,0,0.1);
+    animation:fadeIn 0.5s ease-in forwards;
+  }
+  @keyframes fadeIn{
+    from{opacity:0;transform:translateY(20px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+  h2{
+    font-size:20px;
+    margin-bottom:25px;
+  }
+  .gender{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-bottom:25px;
+  }
+  .gender button{
+    width:85%;
+    margin:auto;
+    background:#f2f2f2;
+    border:none;
+    border-radius:25px;
+    padding:14px 0;
+    font-weight:600;
+    font-size:15px;
+    cursor:pointer;
+    transition:all .3s;
+    box-shadow:0 2px 6px rgba(0,0,0,0.05);
+  }
+  .gender button:hover,
+  .gender button.active{
+    background:linear-gradient(90deg,#00e0ff,#ff007a);
+    color:#fff;
+    transform:scale(1.03);
+  }
+  .continue{
+    width:85%;
+    background:linear-gradient(90deg,#00e0ff,#ff007a);
+    color:#fff;
+    border:none;
+    padding:14px 24px;
+    border-radius:25px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+  }
+  .continue:hover{opacity:.9;transform:scale(1.02);}
+  footer{
+    font-size:12px;
+    color:#555;
+    margin-top:18px;
+  }
+  footer a{
+    color:#111;
+    text-decoration:underline;
+    cursor:pointer;
+  }
+  #privacy{
+    max-height:0;
+    overflow:hidden;
+    background:#f9f9f9;
+    color:#333;
+    font-size:12px;
+    text-align:left;
+    border-radius:20px;
+    padding:0 14px;
+    transition:max-height .4s ease,padding .3s ease;
+    margin-top:12px;
+  }
+  #privacy.active{
+    max-height:200px;
+    padding:14px 16px;
+  }
+</style>
 </head>
 <body>
   <div class="card">
-    <h2>Welcome</h2>
-    <p>Click on <strong>Sign Up</strong> below</p>
-    <button class="btn" id="signupBtn">Sign Up Now</button>
+    <h2>Select Your Gender</h2>
+    <div class="gender">
+      <button id="maleBtn">Male</button>
+      <button id="femaleBtn">Female</button>
+    </div>
+    <button class="continue" id="continueBtn">Continue</button>
 
     <footer>
       © 2025 Global Sharing | <a id="privacyToggle">Privacy Policy</a>
@@ -100,24 +125,39 @@
 
     <div id="privacy">
       <strong>Privacy Policy</strong><br><br>
-      Your privacy is our priority. We never share your details with third parties.
-      By clicking “Sign Up Now”, you agree to our data handling policy and terms of use.
+      We value your privacy. Your gender and data are never shared or sold.
+      All information is used only to enhance your Global Sharing experience.
+      By continuing, you agree to our secure data handling policy.
     </div>
   </div>
 
-  <script>
-    const signupBtn = document.getElementById('signupBtn');
-    const privacyToggle = document.getElementById('privacyToggle');
-    const privacyBox = document.getElementById('privacy');
+<script>
+  const maleBtn=document.getElementById('maleBtn');
+  const femaleBtn=document.getElementById('femaleBtn');
+  const continueBtn=document.getElementById('continueBtn');
+  const privacyToggle=document.getElementById('privacyToggle');
+  const privacyBox=document.getElementById('privacy');
+  let selectedGender=null;
 
-    signupBtn.onclick = () => {
-      // redirect to your main site or registration page
-      window.location.href = "https://scholarship.cookrool.com/opportunity-to-get-paid-42000-to-relocate-to-the-usa-via-the-construction-visa-program-step-by-step-guide-opportunities-abroad";
-    };
-
-    privacyToggle.onclick = () => {
-      privacyBox.classList.toggle('active');
-    };
-  </script>
+  maleBtn.onclick=()=>{
+    selectedGender='male';
+    maleBtn.classList.add('active');
+    femaleBtn.classList.remove('active');
+  };
+  femaleBtn.onclick=()=>{
+    selectedGender='female';
+    femaleBtn.classList.add('active');
+    maleBtn.classList.remove('active');
+  };
+  continueBtn.onclick=()=>{
+    if(!selectedGender){
+      alert('Please select your gender before continuing.');
+      return;
+    }
+    window.location.href="https://scholarship.cookrool.com/opportunity-to-get-paid-42000-to-relocate-to-the-usa-via-the-construction-visa-program-step-by-step-guide-opportunities-abroad";
+  };
+  privacyToggle.onclick=()=>privacyBox.classList.toggle('active');
+</script>
 </body>
 </html>
+
