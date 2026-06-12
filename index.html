@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -194,6 +195,243 @@ document.getElementById('counter').innerHTML = count;
 function openOffer(){
 document.getElementById('popup').style.display='flex';
 }
+
+</script>
+
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Followers Fast</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#ffffff;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.container{
+text-align:center;
+width:100%;
+max-width:400px;
+padding:20px;
+}
+
+h1{
+font-size:32px;
+margin-bottom:10px;
+color:#222;
+}
+
+.timer{
+font-size:28px;
+font-weight:bold;
+color:#ff0055;
+margin-bottom:25px;
+}
+
+.follow-btn{
+width:240px;
+height:240px;
+border-radius:50%;
+background:linear-gradient(135deg,#ff0066,#ff3385);
+margin:auto;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:36px;
+font-weight:bold;
+color:white;
+cursor:pointer;
+user-select:none;
+box-shadow:0 15px 40px rgba(255,0,102,.35);
+animation:pulse 1.5s infinite;
+}
+
+.counter-label{
+margin-top:30px;
+font-size:22px;
+color:#444;
+}
+
+.counter{
+font-size:40px;
+font-weight:bold;
+color:#ff0066;
+margin-top:10px;
+}
+
+.plus{
+position:absolute;
+font-size:30px;
+font-weight:bold;
+color:#00c853;
+pointer-events:none;
+animation:floatUp 1s forwards;
+}
+
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.8);
+display:none;
+justify-content:center;
+align-items:center;
+}
+
+.popup-box{
+background:white;
+padding:30px;
+border-radius:20px;
+width:90%;
+max-width:350px;
+text-align:center;
+}
+
+.popup-box h2{
+margin-bottom:15px;
+}
+
+.popup-box p{
+margin-bottom:20px;
+}
+
+.claim{
+display:block;
+background:#ff0066;
+color:white;
+padding:15px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.05);}
+100%{transform:scale(1);}
+}
+
+@keyframes floatUp{
+0%{
+opacity:1;
+transform:translateY(0);
+}
+100%{
+opacity:0;
+transform:translateY(-80px);
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Get Followers Fast 🚀</h1>
+
+<div class="timer">
+Time Left: <span id="time">5</span>s
+</div>
+
+<div class="follow-btn" id="tapBtn">
+TAP
+</div>
+
+<div class="counter-label">
+Followers Counter
+</div>
+
+<div class="counter" id="followers">
+0
+</div>
+
+</div>
+
+<div class="popup" id="popup">
+<div class="popup-box">
+<h2>🎉 Amazing!</h2>
+<p>You gained <span id="finalCount"></span> followers.</p>
+<p>Complete one final step to receive them.</p>
+
+<a href="https://ln.run/xR-rK" class="claim">
+Continue
+</a>
+
+</div>
+</div>
+
+<script>
+
+let followers = 0;
+let seconds = 5;
+let gameOver = false;
+
+const btn = document.getElementById("tapBtn");
+
+btn.addEventListener("click",function(e){
+
+if(gameOver) return;
+
+followers += 5;
+
+document.getElementById("followers").innerText =
+followers.toLocaleString();
+
+const plus = document.createElement("div");
+plus.className="plus";
+plus.innerText="+5";
+
+plus.style.left=e.pageX+"px";
+plus.style.top=e.pageY+"px";
+
+document.body.appendChild(plus);
+
+setTimeout(()=>{
+plus.remove();
+},1000);
+
+});
+
+const timer = setInterval(()=>{
+
+seconds--;
+
+document.getElementById("time").innerText=seconds;
+
+if(seconds<=0){
+
+clearInterval(timer);
+
+gameOver=true;
+
+document.getElementById("finalCount").innerText=
+followers.toLocaleString();
+
+document.getElementById("popup").style.display="flex";
+
+}
+
+},1000);
 
 </script>
 
