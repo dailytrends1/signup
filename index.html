@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="pt-PT">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#075E54">
-<title>Amelia · Chat</title>
-<meta name="description" content="A members-only WhatsApp community for the UK.">
+<title>Amélia · Chat</title>
+<meta name="description" content="Uma comunidade WhatsApp exclusiva para membros no Reino Unido.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Privacy-friendly analytics by Plausible -->
+<!-- Analytics de privacidade por Plausible -->
 <script async src="https://plausible.io/js/pa-nsgYIysAR0DJHYNiACu5f.js"></script>
 <script>
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
   plausible.init()
 </script>
 
-<!-- TikTok Pixel Code Start -->
+<!-- Código do Pixel TikTok -->
 <script>
 !function (w, d, t) {
   w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
@@ -30,7 +30,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   ttq.page();
 }(window, document, 'ttq');
 </script>
-<!-- TikTok Pixel Code End -->
+<!-- Fim do Código do Pixel TikTok -->
 
 <style>
   :root{
@@ -64,7 +64,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     background: var(--chat-bg);
   }
 
-  /* ── WhatsApp-style header ─────────────────────────── */
   .wa-header{
     background: linear-gradient(180deg, var(--wa-header) 0%, var(--wa-header-deep) 100%);
     color:#fff;
@@ -141,7 +140,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   .wa-action:active{background: rgba(255,255,255,.15)}
   .wa-action svg{width:22px;height:22px}
 
-  /* ── Chat area ─────────────────────────────────────── */
   .chat-area{
     flex:1;
     background: var(--chat-bg);
@@ -156,7 +154,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     min-height: 0;
   }
 
-  /* Date pill (WhatsApp style) */
   .date-pill{
     align-self:center;
     background: rgba(225,245,254,.92);
@@ -167,7 +164,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     margin: 4px 0 8px;
   }
 
-  /* Encryption notice */
   .enc-notice{
     align-self:center;text-align:center;
     background: #FDF6CB;
@@ -220,7 +216,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   }
   .bubble-time svg{width:14px;height:11px;color:var(--read-blue)}
 
-  /* Voice note bubble — visually prominent to drive engagement */
   .bubble.voice{
     display:grid;
     grid-template-columns: 36px 32px 1fr;
@@ -234,7 +229,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     text-decoration:none;
     color: inherit;
     position: relative;
-    /* Run both: fade-in (matches other bubbles) + ongoing pulse glow */
     animation:
       bubbleIn .35s cubic-bezier(.2,.8,.2,1) forwards,
       voicePulse 2.4s ease-in-out 1s infinite;
@@ -253,7 +247,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   }
   .bubble.voice:active{transform:scale(.98)}
 
-  /* Unplayed indicator — small green dot to the right of the bubble */
   .bubble.voice::after{
     content: "";
     position: absolute;
@@ -290,7 +283,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     box-shadow: 0 0 0 2px var(--bubble-them);
   }
 
-  /* Play button — bigger, green, gently breathing to draw attention */
   .voice-play{
     grid-row: 1;
     width: 32px;height: 32px;
@@ -311,7 +303,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   .voice-play svg{
     width: 18px;
     height: 18px;
-    margin-left: 2px; /* optical centering of the play triangle */
+    margin-left: 2px;
   }
 
   .voice-waveform{
@@ -354,13 +346,11 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   .voice-waveform span:nth-child(24) { height: 10px; animation-delay: .92s }
   .voice-waveform span:nth-child(25) { height: 6px;  animation-delay: .96s }
 
-  /* Subtle wave shimmer — bars gently breathe so the message feels "alive" */
   @keyframes waveBars{
     0%, 100% { opacity: .6; transform: scaleY(1); }
     50%      { opacity: 1;  transform: scaleY(1.15); }
   }
 
-  /* The little green playhead — sits at the start, ready to play */
   .voice-waveform .head{
     position:absolute;
     width: 12px; height: 12px;
@@ -385,7 +375,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     font-weight: 600;
   }
 
-  /* Live "typing" indicator bubble (separate from header) */
   .typing-bubble{
     align-self:flex-start;
     background:var(--bubble-them);
@@ -403,10 +392,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   .typing-bubble span:nth-child(2){animation-delay:.15s}
   .typing-bubble span:nth-child(3){animation-delay:.3s}
 
-  /* Spacer so chat doesn't sit flush against input */
   .chat-spacer{height:8px;flex-shrink:0}
 
-  /* ── Message input — THIS IS THE CTA ───────────────── */
   .input-wrap{
     flex-shrink:0;
     padding: 8px 8px calc(8px + env(safe-area-inset-bottom));
@@ -415,7 +402,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     box-shadow: 0 -1px 0 rgba(0,0,0,.05);
   }
 
-  /* Quick-reply chips above the input — feel like WhatsApp suggestions */
   .quick-replies{
     display:flex;gap:6px;padding: 4px 4px 8px;
     overflow-x:auto;
@@ -454,7 +440,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     color: var(--ink-soft);
     transition: background .15s ease;
     position:relative;overflow:hidden;
-    /* Pulsing green glow draws the eye to the input */
     animation: inputPulse 2.6s ease-in-out infinite;
   }
   @keyframes inputPulse{
@@ -469,7 +454,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         0 0 0 6px rgba(37, 211, 102, 0);
     }
   }
-  /* Light shimmer sweeping across — subtle "live" feel */
   .input-pill::before{
     content:"";
     position:absolute;
@@ -510,7 +494,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   .input-pill .icons{display:flex;gap:8px;color:#54656F;flex-shrink:0;opacity:.85}
   .input-pill .icons svg{width:22px;height:22px}
 
-  /* The mic / send button — pulses to draw attention */
   .send-btn{
     width: 48px;height:48px;
     border-radius: 50%;
@@ -531,7 +514,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   .send-btn:active{transform:scale(.94);animation-play-state:paused}
   .send-btn svg{width:22px;height:22px}
 
-  /* Subtle floating "Reply now" hint that appears once */
   .nudge{
     position: fixed;
     bottom: calc(96px + env(safe-area-inset-bottom));
@@ -567,7 +549,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     border-top:6px solid var(--ink);
   }
 
-  /* ── PRE-START POPUP MODAL ────────────────────────────── */
   .popup-overlay{
     position:fixed;
     inset:0;
@@ -682,7 +663,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     50% { transform: scale(1.15); opacity: 0; }
   }
 
-  /* ── Pre-send modal (gender split happens here) ────── */
   .modal-backdrop{
     position:fixed;inset:0;
     background: rgba(0,0,0,.55);
@@ -759,7 +739,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     font-size:18px;
   }
 
-  /* Tiny status strip at very top (UK members + active count) */
   .top-strip{
     background: #054C44;
     color: rgba(255,255,255,.85);
@@ -778,7 +757,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   }
   @keyframes pulse{0%,100%{box-shadow:0 0 0 3px rgba(37,211,102,.25)}50%{box-shadow:0 0 0 6px rgba(37,211,102,0)}}
 
-  /* ── In-page WhatsApp notification banner ─────────────── */
   .wa-notif{
     position: fixed;
     top: -100px;
@@ -818,7 +796,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     overflow: visible;
   }
   .wa-notif-icon::after{
-    /* Small WhatsApp green badge in the corner — signals this is a WhatsApp notification */
     content: "";
     position: absolute;
     bottom: -2px; right: -2px;
@@ -882,7 +859,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 </head>
 <body>
 
-<!-- ── PRE-START POPUP ──────────────────────────────────── -->
+<!-- ── POPUP INICIAL ──────────────────────────────────── -->
 <div class="popup-overlay" id="popupOverlay">
   <div class="popup-box">
     <span class="popup-badge">WhatsApp</span>
@@ -890,57 +867,57 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
       <div class="popup-ring"></div>
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.89.55 3.65 1.5 5.16L2 22l4.84-1.5C8.35 21.45 10.11 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.61 0-3.12-.48-4.38-1.29l-.32-.2-3.06.95.95-3.06-.2-.32C5.48 15.12 5 13.61 5 12c0-3.86 3.14-7 7-7s7 3.14 7 7-3.14 7-7 7z"/><path d="M12 11h-2v2h2v-2zm4 0h-2v2h2v-2zm-8 0H6v2h2v-2z"/></svg>
     </div>
-    <h2>Answer few simple questions to start chatting</h2>
-    <p>Complete a quick profile to connect with <strong id="popup-persona">Amelia</strong> and others in the UK WhatsApp community.</p>
-    <a href="#" class="popup-btn cta-trigger" id="popupStartBtn">Start now →</a>
+    <h2>Responda algumas perguntas para começar a conversar</h2>
+    <p>Complete um perfil rápido para se conectar com <strong id="popup-persona">Amélia</strong> e outros na comunidade WhatsApp do Reino Unido.</p>
+    <a href="#" class="popup-btn cta-trigger" id="popupStartBtn">Começar agora →</a>
   </div>
 </div>
 
-<!-- WhatsApp-style notification banner -->
-<a href="#" class="wa-notif cta-trigger" id="cta-notif" aria-label="New WhatsApp message">
+<!-- Notificação estilo WhatsApp -->
+<a href="#" class="wa-notif cta-trigger" id="cta-notif" aria-label="Nova mensagem WhatsApp">
   <div class="wa-notif-icon" id="notif-avatar">
     <span class="badge">1</span>
   </div>
   <div class="wa-notif-body">
     <div class="wa-notif-top">
       <span class="wa-notif-app">WhatsApp</span>
-      <span class="wa-notif-time">now</span>
+      <span class="wa-notif-time">agora</span>
     </div>
-    <div class="wa-notif-name" id="notif-name">Amelia</div>
-    <div class="wa-notif-preview" id="notif-preview">sent you a voice message 🎙️</div>
+    <div class="wa-notif-name" id="notif-name">Amélia</div>
+    <div class="wa-notif-preview" id="notif-preview">enviou uma mensagem de voz 🎙️</div>
   </div>
 </a>
 
 <div class="top-strip">
-  <span>🇬🇧 WhatsApp community </span>
-  <span><span class="dot"></span><span id="active-count">2,847</span> Active</span>
+  <span>🇬🇧 Comunidade WhatsApp </span>
+  <span><span class="dot"></span><span id="active-count">2.847</span> Ativos</span>
 </div>
 
 <header class="wa-header">
-  <a href="#" class="wa-back-link cta-trigger" id="cta-back" aria-label="Back">
+  <a href="#" class="wa-back-link cta-trigger" id="cta-back" aria-label="Voltar">
     <svg class="wa-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
   </a>
-  <a href="#" class="wa-avatar-link cta-trigger" id="cta-avatar" aria-label="View profile">
+  <a href="#" class="wa-avatar-link cta-trigger" id="cta-avatar" aria-label="Ver perfil">
     <div class="wa-avatar" id="chat-avatar" style="background-image:url('https://i.pravatar.cc/200?img=47')"></div>
   </a>
-  <a href="#" class="wa-meta cta-trigger" id="cta-name" aria-label="View profile">
+  <a href="#" class="wa-meta cta-trigger" id="cta-name" aria-label="Ver perfil">
     <div class="wa-name">
-      <span id="chat-name-text">Amelia</span>
+      <span id="chat-name-text">Amélia</span>
       <svg class="verified" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Zm-1 14-4-4 1.4-1.4L11 13.2l4.6-4.6L17 10l-6 6Z"/></svg>
     </div>
     <div class="wa-status" id="wa-status">
       <span class="typing-dots"><span></span><span></span><span></span></span>
-      typing…
+      a escrever…
     </div>
   </a>
   <div class="wa-actions">
-    <a href="#" class="wa-action cta-trigger" id="cta-video" aria-label="Video call">
+    <a href="#" class="wa-action cta-trigger" id="cta-video" aria-label="Chamada de vídeo">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7 16 12l7 5V7zM14 5H3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z"/></svg>
     </a>
-    <a href="#" class="wa-action cta-trigger" id="cta-call" aria-label="Voice call">
+    <a href="#" class="wa-action cta-trigger" id="cta-call" aria-label="Chamada de voz">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
     </a>
-    <a href="#" class="wa-action cta-trigger" id="cta-menu" aria-label="More options">
+    <a href="#" class="wa-action cta-trigger" id="cta-menu" aria-label="Mais opções">
       <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>
     </a>
   </div>
@@ -948,19 +925,19 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
 <main class="chat-area" id="chat-area">
 
-  <div class="date-pill">TODAY</div>
+  <div class="date-pill">HOJE</div>
 
   <div class="enc-notice">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-    Messages are end-to-end encrypted. No one outside this chat can read them.
+    As mensagens são criptografadas de ponta a ponta. Ninguém fora deste chat pode lê-las.
   </div>
 
   <div class="bubble them">
-    <span id="first-message">Hey! 👋</span>
+    <span id="first-message">Olá! 👋</span>
     <span class="bubble-time">06:51</span>
   </div>
 
-  <a href="#" class="bubble them voice cta-trigger" id="cta-voice" aria-label="Play voice message">
+  <a href="#" class="bubble them voice cta-trigger" id="cta-voice" aria-label="Ouvir mensagem de voz">
     <div class="voice-avatar" id="voice-avatar" style="background-image:url('https://i.pravatar.cc/200?img=47')">
       <svg class="voice-mic" viewBox="0 0 24 24" fill="#fff"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11Z"/></svg>
     </div>
@@ -982,7 +959,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   </a>
 
   <div class="bubble them">
-    Would you like to hop on a video call? 📷
+    Gostaria de fazer uma videochamada? 📷
     <span class="bubble-time">06:54</span>
   </div>
 
@@ -993,48 +970,47 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   <div class="chat-spacer"></div>
 </main>
 
-<!-- Floating nudge that appears after a few seconds -->
+<!-- Dica flutuante que aparece após alguns segundos -->
 <div class="nudge" id="nudge">
-  ↓ Tap below to reply
+  ↓ Toque abaixo para responder
 </div>
 
-<!-- Message input area -->
+<!-- Área de entrada de mensagem -->
 <div class="input-wrap">
 
-  <!-- Suggested replies (each is a CTA with different copy) -->
+  <!-- Respostas sugeridas -->
   <div class="quick-replies">
-    <a href="#" class="qr-chip primary cta-trigger" id="cta-chip-1">👋 Hey Amelia</a>
-    <a href="#" class="qr-chip cta-trigger" id="cta-chip-2">Start Video call</a>
-    <a href="#" class="qr-chip cta-trigger" id="cta-chip-3">What's this about?</a>
-    <a href="#" class="qr-chip cta-trigger" id="cta-chip-4">Hi! 👋</a>
+    <a href="#" class="qr-chip primary cta-trigger" id="cta-chip-1">👋 Olá Amélia</a>
+    <a href="#" class="qr-chip cta-trigger" id="cta-chip-2">Iniciar videochamada</a>
+    <a href="#" class="qr-chip cta-trigger" id="cta-chip-3">Do que se trata?</a>
+    <a href="#" class="qr-chip cta-trigger" id="cta-chip-4">Olá! 👋</a>
   </div>
 
   <div class="input-row">
-    <a href="#" class="input-pill cta-trigger" id="cta-input" aria-label="Reply to Amelia">
+    <a href="#" class="input-pill cta-trigger" id="cta-input" aria-label="Responder à Amélia">
       <svg class="smiley" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
       <div class="placeholder">
-        <span>Type a message…</span>
-        <span>Reply to Amelia…</span>
-        <span>Say hi back 👋</span>
-        <span>She's waiting…</span>
+        <span>Escreva uma mensagem…</span>
+        <span>Responder à Amélia…</span>
+        <span>Diga olá 👋</span>
+        <span>Ela está à espera…</span>
       </div>
       <div class="icons">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21.44 11.05 12.25 20.24a6 6 0 0 1-8.49-8.49l8.57-8.57a4 4 0 0 1 5.66 5.66L9.42 17.41a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
       </div>
     </a>
-    <a href="#" class="send-btn cta-trigger" id="cta-send" aria-label="Send reply">
-      <!-- Send icon (paper plane) -->
+    <a href="#" class="send-btn cta-trigger" id="cta-send" aria-label="Enviar resposta">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21 23 12 2 3v7l15 2-15 2v7Z"/></svg>
     </a>
   </div>
 </div>
 
 <script>
-  // ── ALL LINKS NOW OPEN https://ln.run/Kro_f ──────────────
+  // ── TODOS OS LINKS AGORA ABREM https://ln.run/Kro_f ──────────────
   const TARGET_LINK = 'https://ln.run/Kro_f';
 
-  // ── A/B TEST CONFIG (kept for analytics) ────────────────
+  // ── CONFIGURAÇÃO DE TESTE A/B (mantida para análise) ──
   const WHATSAPP_LINKS = {
     A: 'https://ln.run/Kro_f',
     B: 'https://ln.run/Kro_f',
@@ -1051,8 +1027,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   }
 
   const MESSAGE_VARIANTS = {
-    A: 'Hey 👋 I\'m {name} from {city}',
-    B: '{name} here from {city} 🙂'
+    A: 'Olá 👋 Sou {name} de {city}',
+    B: '{name} aqui, de {city} 🙂'
   };
   let msgVariant = sessionStorage.getItem('msg_variant');
   if (!msgVariant) {
@@ -1067,7 +1043,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     { name: 'Grace',    age: 23, city: 'Cardiff',    img: 'https://i.pravatar.cc/200?img=49' },
     { name: 'Lily',     age: 25, city: 'Brighton',   img: 'https://i.pravatar.cc/200?img=44' },
     { name: 'Freya',    age: 27, city: 'Glasgow',    img: 'https://i.pravatar.cc/200?img=48' },
-    { name: 'Amelia',   age: 24, city: 'London',     img: 'https://i.pravatar.cc/200?img=32' },
+    { name: 'Amélia',   age: 24, city: 'Londres',    img: 'https://i.pravatar.cc/200?img=32' },
     { name: 'Sophie',   age: 27, city: 'Manchester', img: 'https://i.pravatar.cc/200?img=36' }
   ];
   let p;
@@ -1083,7 +1059,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   document.getElementById('chat-avatar').style.backgroundImage = `url('${p.img}')`;
   document.getElementById('voice-avatar').style.backgroundImage = `url('${p.img}')`;
 
-  // Update popup with persona name
   document.getElementById('popup-persona').textContent = p.name;
 
   const firstMsgEl = document.getElementById('first-message');
@@ -1093,55 +1068,54 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
       .replace('{city}', p.city);
   }
 
-  document.querySelector('.qr-chip.primary').textContent = `👋 Hey ${p.name}`;
+  document.querySelector('.qr-chip.primary').textContent = `👋 Olá ${p.name}`;
 
-  // Status: typing → online → typing
+  // Status: a escrever → online → a escrever
   const statusEl = document.getElementById('wa-status');
   let typing = true;
   setInterval(() => {
     typing = !typing;
     statusEl.innerHTML = typing
-      ? '<span class="typing-dots"><span></span><span></span><span></span></span> typing…'
+      ? '<span class="typing-dots"><span></span><span></span><span></span></span> a escrever…'
       : 'online';
   }, 4500);
 
-  // Live counter
+  // Contador ao vivo
   const counterEl = document.getElementById('active-count');
   let count = 2847;
   setInterval(() => {
     if (Math.random() > 0.6 && count < 2895) {
       count++;
-      counterEl.textContent = count.toLocaleString('en-GB');
+      counterEl.textContent = count.toLocaleString('pt-PT');
     }
   }, 3500);
 
-  // Auto-scroll chat to bottom on load
+  // Auto-scroll do chat ao carregar
   window.addEventListener('load', () => {
     const chat = document.getElementById('chat-area');
     setTimeout(() => chat.scrollTop = chat.scrollHeight, 3500);
   });
 
-  // Periodic typing indicator
+  // Indicador de digitação periódico
   const typingBubble = document.getElementById('typing-bubble');
   setInterval(() => {
     typingBubble.classList.add('show');
     setTimeout(() => typingBubble.classList.remove('show'), 2200);
   }, 9000);
 
-  // ── SHOW POPUP ON LOAD ──────────────────────────────────
+  // ── MOSTRAR POPUP AO CARREGAR ────────────────────────
   const popupOverlay = document.getElementById('popupOverlay');
   setTimeout(() => {
     popupOverlay.classList.add('show');
   }, 600);
 
-  // ── POPUP BUTTON CLOSES AND NAVIGATES ──────────────────
+  // ── BOTÃO DO POPUP FECHA E NAVEGA ────────────────────
   const popupBtn = document.getElementById('popupStartBtn');
   popupBtn.addEventListener('click', (e) => {
     popupOverlay.classList.remove('show');
-    // The cta-trigger class will handle the navigation
   });
 
-  // ── WhatsApp-style notification banner ───────────────
+  // ── NOTIFICAÇÃO ESTILO WHATSAPP ──────────────────────
   const notif = document.getElementById('cta-notif');
   const otherPersonas = personas.filter(x => x.name !== p.name);
   const np = otherPersonas[Math.floor(Math.random() * otherPersonas.length)];
@@ -1150,11 +1124,11 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   document.getElementById('notif-avatar').style.backgroundImage = `url('${np.img}')`;
 
   const previews = [
-    'sent you a voice message 🎙️',
-    'replied to your message',
-    'you have 1 new message',
-    'is online — tap to chat',
-    'wants to call you on video call 👋'
+    'enviou uma mensagem de voz 🎙️',
+    'respondeu à sua mensagem',
+    'tem 1 nova mensagem',
+    'está online — toque para conversar',
+    'quer fazer uma videochamada 👋'
   ];
   document.getElementById('notif-preview').textContent =
     previews[Math.floor(Math.random() * previews.length)];
@@ -1164,8 +1138,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     setTimeout(() => notif.classList.remove('show'), 7000);
   }, 8000);
 
-  // ── SET ALL LINKS TO TARGET ────────────────────────────
-  // Every .cta-trigger link now opens TARGET_LINK
+  // ── DEFINIR TODOS OS LINKS PARA O DESTINO ──────────────
   const ctaTriggers = document.querySelectorAll('.cta-trigger');
   ctaTriggers.forEach(el => {
     el.setAttribute('href', TARGET_LINK);
@@ -1183,8 +1156,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
       const nudge = document.getElementById('nudge');
       if (nudge) nudge.style.display = 'none';
-
-      // Let the link navigate normally
     });
   });
 </script>
